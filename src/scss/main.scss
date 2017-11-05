@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css');
+
+@import "font";
+
+main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    font-family: $font-family;
+  }
+}
