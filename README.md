@@ -5,12 +5,14 @@
 - [EJS](https://github.com/mde/ejs)の自動コンパイル
 
 ## はじめかた
-### Gitをインストール
+### システム要件
+以下のプログラムがインストールされている必要があります。
+#### Git
 Macではすでにインストールされているかもしれません。  
 入っていない場合は[こちら](https://git-scm.com/)からインストールしてください。
-### Nodeをインストール
+#### Node
 [ここ](https://nodejs.org/ja/)からLTS版をインストールしてください。
-### yarnをインストール
+#### yarn
 JavaScript用のパッケージマネージャです。  
 下記のコマンドを実行してインストールしてください。
 ```
@@ -22,65 +24,49 @@ git clone git@github.com:MasahiroHarada/frontend-starter.git <プロジェクト
 cd <プロジェクト名>
 rm -rf .git
 yarn install
-npm run dev
 ```
 
-## 利用できるnpmコマンド
-### dev
+## 開発フロー
+### 概要
+プロジェクトのルートディレクトリで、まずは下記のコマンドを実行してください。
 ```
 npm run dev
 ```
-scssおよびejsファイルをコンパイルして開発用サーバーを立ち上げます。  
-scssファイルおよびejsファイルを監視し、変更があった場合は自動的にブラウザをリロードします。
-### build
+このコマンドでGulpのタスクが実行されます。
+
+何が起きるかというと、
+1. scssファイルのコンパイル
+1. ejsファイルのコンパイル
+1. 開発用サーバー起動
+
+監視モードになるので、ファイルに変更を加えると  
+自動的にコンパイル → ブラウザリロードが行われます。
+
+コンパイルだけしたい場合は、下記のコマンドを実行してください。
 ```
 npm run build
 ```
-scssおよびejsファイルをコンパイルします。
-### sass
-```
-npm run sass
-```
-scssファイルをコンパイルします。
-### ejs
-```
-npm run ejs
-```
-ejsファイルをコンパイルします。
+### Sass
+#### 開発ディレクトリ
+<プロジェクトディレクトリ>/src/scss
+#### コンパイル先
+<プロジェクトディレクトリ>/public/styles
+### EJS
+#### 開発ディレクトリ
+<プロジェクトディレクトリ>/templates
+#### コンパイル先
+<プロジェクトディレクトリ>/public
+#### EJSを使わない場合
+templatesディレクトリの中身を全て削除し、publicディレクトリ内にHTMLを書いてください。
 
 ## 設定
 ### config.js
-TODO
-```js
-export default {
-  dir: {
-    public: {
-      base: 'public',
-      styles: 'styles'
-    },
-    source: {
-      base: 'src',
-      scss: 'scss',
-      templates: 'templates'
-    }
-  },
-  sass: {
-    // =====================================================
-    // Sass Output Style
-    // nested / compact / expanded / compressed
-    // https://web-design-weekly.com/2014/06/15/different-sass-output-styles/
-    // =====================================================
-    outputStyle: 'compact'
-  }
-};
-```
+コンパイルにまつわる設計項目です。
 ### tampletes/vars.json
-TODO
-```json
-{
-  "message": "Hello world."
-}
-```
+EJSで使用する変数はこのファイルに記載してください。
 
 ## 参考リンク
 - [テンプレートエンジン「EJS」とタスクランナー「Gulp.js」で爆速HTMLコーディング](https://liginc.co.jp/web/html-css/html/144170)
+
+## 検証環境
+macOS Sierra ver.10.12.6
