@@ -1,10 +1,11 @@
-# フロントエンド開発の雛形プロジェクト
-## 機能
+# Frontend starter
+## :innocent: 機能
+フロントエンド開発の雛形プロジェクトです。
 - オートリロード（[browser-sync](https://www.browsersync.io/)）
 - Sassの自動コンパイル
 - [EJS](https://github.com/mde/ejs)の自動コンパイル
 
-## はじめかた
+## :rocket: はじめかた
 ### システム要件
 以下のプログラムがインストールされている必要があります。
 #### Git
@@ -26,7 +27,7 @@ rm -rf .git
 yarn install
 ```
 
-## 開発フロー
+## :bulb: 開発フロー
 ### 概要
 プロジェクトのルートディレクトリで、まずは下記のコマンドを実行してください。
 ```
@@ -59,14 +60,14 @@ npm run build
 #### EJSを使わない場合
 templatesディレクトリの中身を全て削除し、publicディレクトリ内にHTMLを書いてください。
 
-## 設定
+## :wrench: 設定
 ### config.js
 コンパイルにまつわる設計項目です。
 ### tampletes/vars.json
 EJSで使用する変数はこのファイルに記載してください。
 
-## 参考リンク
+## :earth_asia: 参考リンク
 - [テンプレートエンジン「EJS」とタスクランナー「Gulp.js」で爆速HTMLコーディング](https://liginc.co.jp/web/html-css/html/144170)
 
-## 検証環境
+## :apple: 検証環境
 macOS Sierra ver.10.12.6
