@@ -53,7 +53,7 @@ npm run build
 <プロジェクトディレクトリ>/public/styles
 ### EJS
 #### 開発ディレクトリ
-<プロジェクトディレクトリ>/templates
+<プロジェクトディレクトリ>/src/templates
 #### コンパイル先
 <プロジェクトディレクトリ>/public
 #### EJSを使わない場合
